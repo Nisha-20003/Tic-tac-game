@@ -23,7 +23,7 @@ while (true) {
   inputRound = prompt("How many rounds do you want to play?");
   round = Number(inputRound);
 
-  if (isNaN(round) || round % 1 !== 0 || round <= 0) {
+  if (isNaN(round) || round % 1 !== 0 || round <= 0 || round > 50) {
     alert("The number you input is invalid");
   } else {
     break;
