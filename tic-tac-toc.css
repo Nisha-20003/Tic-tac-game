@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to left, #100000, #212121, #220053);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+h1#head{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 3vw; /* Responsive heading size */
+}
+
+button.box{
+    border: none;
+    border-radius: 13px;
+    font-size: 4rem; /* Font size will scale based on viewport width */
+    color: blue;
+    font-family: cursive; 
+    font-weight: 1000;
+    box-shadow: 4px 2px 3px black; 
+}
+
+div.container{
+    margin-top: 6rem;
+    display: grid;
+    grid-template-rows: repeat(3, 15vw); /* Use viewport width for responsive sizing */
+    grid-template-columns: repeat(3, 15vw);
+    grid-gap: 0.6rem; 
+    justify-content: center;
+    align-content: center;
+    height: auto; /* Auto adjust height */
+}
+
+input:focus{
+    height: 2.5rem; 
+    width: 100%; /* Full width on focus */
+    max-width: 200px; 
+    border-radius: 4px; 
+    border: 2px solid rgba(255, 80, 128, 0.5);
+} 
+
+div.TableContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 30%; /* Make table responsive */
+}
+
+td{
+    border: 2px solid white;
+    border-bottom: none;
+    padding: 1vw 2vw; /* Responsive padding */
+    font-size: 7vw;
+}
+
+th{
+    border-top: none;
+    border-left: 2px solid white;
+    color: blue;
+    font-size: 7vw; /* Responsive font size */
+    padding: 1vw;
+    font-family: cursive; 
+    font-weight: 1000;
+}
+
+th:first-child,tr:first-child{
+    border-left: none;
+}
+
+td:first-child,tr:first-child{
+    border-left: none;
+}
+
+td:last-child,tr:last-child{
+    border-right: none;
+}
+
+.Message{
+    font-size: 4vw; /* Responsive font size */
+    font-weight: 700;
+    font-family: cursive;
+    color: white;
+    text-align: center;
+    margin: 45px;
+}
+
+.score{
+    font-family: sans-serif; 
+    font-weight: 700;
+    font-size: 10vw; /* Responsive font size */
+    display: block;
+    margin-top: 45px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h1#head {
+        margin-top: 10%;
+        font-size: 6vw; /* Reduce heading size */
+    }
+
+    button.box {
+        font-size: 3rem; /* Adjust button font size */
+    }
+
+    div.container {
+        grid-template-rows: repeat(3, 25vw); /* Adjust grid sizes for smaller screens */
+        grid-template-columns: repeat(3, 25vw);
+        grid-gap: 0.3rem;
+    }
+
+    .Message {
+        font-size: 5vw; /* Adjust message font size */
+    }
+
+    .score {
+        font-size: 12vw; /* Adjust score font size */
+    }
+}
+
+@media (max-width: 480px) {
+    div.TableContainer {
+        left: 2vw; /* Further adjust for small screens */
+        top: 5vh;
+    }
+
+    button.box {
+        font-size: 2rem; /* Smaller font size for buttons */
+    }
+
+    div.container {
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-columns: repeat(3, 30vw);
+    }
+
+    .Message {
+        font-size: 6vw; /* Further adjust message font size */
+    }
+
+    .score {
+        font-size: 15vw; /* Further adjust score font size */
+    }
+}
